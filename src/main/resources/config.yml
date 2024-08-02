@@ -1,0 +1,61 @@
+# permissions :
+#     checkplayer.admin - право на проверку игрока
+#     checkplayer.protect - право на защиту от проверок
+
+tp-settings:
+  tp-coords: true
+  world: "world"
+  coord-x: 0
+  coord-y: 90
+  coord-z: 0
+
+check-settings:
+  blindness-effect: true # Накладывать ли эффект слепоты на игрока которого проверяют?
+  block-chat: true # Блокировать ли чат во время проверки?
+  message-type: "&cᴄʜᴇᴄᴋ ▶ &f%player%: &7%message%"
+  white-commands: # Команды которые можно вводить во время проверки
+    - /msg
+  title-message:
+    enable: true
+    up-title: "&cВЫ ВЫЗВАНЫ НА ПРОВЕРКУ!!!"
+    down-title: "&7* Делайте то, что вам говорит администратор"
+    seconds: 10
+
+type-ban: # 3 типа бана
+  confess: # Сознание игрока в читах
+    form-ban: "ban %player% 24d"
+  cancel: # Если он прошёл проверку и оказался читером
+    form-ban: "ban %player% 30d"
+  leave: # Если он вышел из игры
+    form-ban: "ban %player% 60d"
+
+bossbar-settins: # Настройки boss-bar
+  enable: true
+  color: "RED"
+  title: "#F36473✦ &fВы на проверке: #F36473%time% &fсек."
+
+messages:
+  check-start-message:
+    - ""
+    - "&c&lПРОВЕРКА &c▶ Внимание! Вы вызваны на проверку!"
+    - "&a/check confess &f- для того, чтобы сознаться"
+    - "&a/check msg <сообщение> &f- для того чтобы отправить сообщение проверяющему."
+    - ""
+  check-confirm-message: "&c&lПРОВЕРКА &a▶ Поздравляем, вы прошли проверку, спасибо что играете без читов!"
+  not-on-the-check: "&c&lПРОВЕРКА &c▶ Вы не находитесь на проверке!"
+  no-permission: "&c&lПРОВЕРКА &c▶ У вас недостаточно прав на данные команды!"
+  player-is-not-online: "&c&lПРОВЕРКА &c▶ Игрок %player_target% не в сети!"
+  player-confess-message: "&c&lПРОВЕРКА &a▶ Игрок %player% сознался в использовании читов!"
+  player-quit-message: "&c&lПРОВЕРКА &a▶ Игрок %player% вышел во время проверки и был забанен!"
+  use-command: "&c&lПРОВЕРКА &c▶ Используйте /check help"
+  use-message: "&c&lПРОВЕРКА &c▶ Используйте: /check msg  <сообщение>"
+  question-message: "&c&lПРОВЕРКА &c▶ Вы точно хотите сознаться? \n&a&lYES &f- Да \n&c&lNO &f- Нет"
+  deny-confess: "&c&lПРОВЕРКА &a▶ Вы отказались сознаваться!"
+  block-command-message: "&c&lПРОВЕРКА &c▶ Вы не можете вводить данную команду во время проверки!"
+  cant-be-called: "&c&lПРОВЕРКА &c▶ Вы не можете вызвать себя не проверку!"
+  player-has-protect: "&c&lПРОВЕРКА &c▶ У игрока есть защита от проверки!"
+  cant-be-canceled: "&c&lПРОВЕРКА &c▶ Вы не можете закончить проверку на себя!"
+  cant-be-confirmed: "&c&lПРОВЕРКА &c▶ Вы не можете закончить проверку на себя!"
+  admin-message-confirm: "&c&lПРОВЕРКА &c▶ Игрок %player% прошел проверку!"
+  admin-message-cancel: "&c&lПРОВЕРКА &c▶ Игрок %player% не прошел проверку!"
+  admin-message-start: "&c&lПРОВЕРКА &c▶ Вы вызвали игрока %player% на проверку!"

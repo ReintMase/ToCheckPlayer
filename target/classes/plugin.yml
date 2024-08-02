@@ -1,0 +1,15 @@
+name: ToCheckPlayer
+version: '1.0'
+main: me.seven.reintmase.tocheckplayer.Main
+api-version: '1.16'
+commands:
+  check:
+    description: Чек
+    usage: /check
+    aliases:
+      - check
+permissions:
+  checkplayer.admin:
+    description: Позволяет использовать все команды связанные с /check
+  checkplayer.protect:
+    description: Игрока с данным пермишеном нельзя будет вызвать на проверку
